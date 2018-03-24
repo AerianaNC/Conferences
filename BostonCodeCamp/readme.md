@@ -24,9 +24,13 @@ https://www.bostoncodecamp.com/CC29/sessions/details/16630
 1. Next
 
 # 1. Create a simple Bot that echos what you type
+
 ..1 Prereqs
-    Install Visual Studio 2017 Community
+
+   Install Visual Studio 2017 Community
+   
         https://www.visualstudio.com/vs/community/
+        
         In Visual Studio, update all extensions to their latest versions.
         
         Download the Bot Application, Bot Controller, and Bot Dialog .zip files. Install the project template by copying Bot Application.zip to your Visual Studio 2017 project templates directory. Install the item templates by copying Bot Controller.zip and Bot Dialog.zip to your Visual Studio 2017 item templates directory.
