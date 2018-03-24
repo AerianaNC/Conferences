@@ -1,3 +1,5 @@
+
+
 BCC29, April 2018
 
 # Intro to the Microsoft Bot Framework with Azure Cognitive Services to easily create a powerful AI bot for Twitter, Slack + more
@@ -13,3 +15,29 @@ Beth Zeranski
 @BethZeranski 
 
 https://www.bostoncodecamp.com/CC29/sessions/details/16630
+
+# Overview
+1. Create a simple Bot that echos what you type
+   - decide if it's azure first or vs first
+   https://azure.microsoft.com/en-us/free/
+1. Next
+1. Next
+
+# 1. Create a simple Bot that echos what you type
+..1 Prereqs
+    Install Visual Studio 2017 Community
+        https://www.visualstudio.com/vs/community/
+        In Visual Studio, update all extensions to their latest versions.
+        
+        Download the Bot Application, Bot Controller, and Bot Dialog .zip files. Install the project template by copying Bot Application.zip to your Visual Studio 2017 project templates directory. Install the item templates by copying Bot Controller.zip and Bot Dialog.zip to your Visual Studio 2017 item templates directory.
+        
+        The Visual Studio 2017 project templates directory is typically located at %USERPROFILE%\Documents\Visual Studio 2017\Templates\ProjectTemplates\Visual C#\ and the item templates directory is at %USERPROFILE%\Documents\Visual Studio 2017\Templates\ItemTemplates\Visual C#\
+        
+..1 Install Microsoft BotFramework to Visual Studio
+    
+
+https://docs.microsoft.com/en-us/azure/bot-service/
+..1 Install Git
+        https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+    
+..2 
