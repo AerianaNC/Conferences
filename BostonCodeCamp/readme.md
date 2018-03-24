@@ -20,8 +20,10 @@ https://www.bostoncodecamp.com/CC29/sessions/details/16630
 1. Create a simple Bot that echos what you type
    - decide if it's azure first or vs first
    https://azure.microsoft.com/en-us/free/
-1. Next
-1. Next
+   
+1. Take the simple Bot and add bla
+
+1. Deploy
 
 # 1. Create a simple Bot that echos what you type
 
