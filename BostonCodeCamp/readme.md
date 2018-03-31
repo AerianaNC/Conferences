@@ -19,27 +19,33 @@ https://www.bostoncodecamp.com/CC29/sessions/details/16630
 
 We are going to create a Bot which uses Cognitive Services to make your own intelligent Bot and deploy it to a 3rd party channel.
 Here are the main steps:
-1. Set up your local environment for development. 'Time Required: tbd' 
 
-1. Create a free Azure account  
-   - We will be using the free bot service.
+1. Set up your environment. 'Time Required: tbd' 
    
 1. Develop an Echo Bot in Visual Studio Community 2017. 'Time Required: 5 min'
-   
-1. Test Echo Bot in Bot Emulator. 'Time Required: 5 min'
 
-1. Add Cog Service capability.
+1. Add AI capabilities to Bot 
 
-1. Register Bot with Bot Framework
-
-1. Create a simple Bot that echos what you type. 'Time Required:'
-
-1. Add AI capabilities to Bot
-
-1. Publish Bot to Azure
+1. Publish Bot
 
 1. TaDa!
 
+***
+##1. Set up your environment. 'Time Required: tbd'
+
+
+1.1 Visual Studio Community with Microsoft Bot Builder SDK for .Net
+
+1.2 Bot Framework Emulator
+
+1.3 Azure - free account to use free Bot service
+
+Optional:
+
+1.4 Git - if you want to copy my code
+
+
+***
 =============================================================================
 
 
