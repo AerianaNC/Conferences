@@ -1,5 +1,4 @@
 
-
 BCC29, April 2018
 
 # Intro to the Microsoft Bot Framework with Azure Cognitive Services to easily create a powerful AI bot for Twitter, Slack + more
@@ -17,13 +16,47 @@ Beth Zeranski
 https://www.bostoncodecamp.com/CC29/sessions/details/16630
 
 # Overview
-1. Create a simple Bot that echos what you type
+
+We are going to create a Bot which uses Cognitive Services to make your own intelligent Bot and deploy it to a 3rd party channel.
+Here are the main steps:
+1. Set up your local environment for development. 'Time Required: tbd' 
+
+1. Create a free Azure account  
+   - We will be using the free bot service.
+   
+1. Develop an Echo Bot in Visual Studio Community 2017. 'Time Required: 5 min'
+   
+1. Test Echo Bot in Bot Emulator. 'Time Required: 5 min'
+
+1. Add Cog Service capability.
+
+1. Register Bot with Bot Framework
+
+1. Create a simple Bot that echos what you type. 'Time Required:'
+
+1. Add AI capabilities to Bot
+
+1. Publish Bot to Azure
+
+1. TaDa!
+
+=============================================================================
+
+
+=============================================================================
+
+
+
+1. Publish a Bot from Visual Studio to Azure
+
+
+
    - decide if it's azure first or vs first
    https://azure.microsoft.com/en-us/free/
    
 1. Take the simple Bot and add bla
 
-1. Deploy
+
 
 # 1. Create a simple Bot that echos what you type
 
