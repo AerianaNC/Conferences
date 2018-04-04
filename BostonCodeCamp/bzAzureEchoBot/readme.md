@@ -24,7 +24,7 @@ Here is what we will do:
 
 1. Sign into Azure
 
-1. Create/Test Azure Echo Bot
+1. Create Azure Echo Bot
 
    Time Required ~< 5 min
 
@@ -47,13 +47,79 @@ Here is what we will do:
 1. If time, try intents or utterances
 
 ***
+1. First, sign into the [Azure portal](http://portal.azure.com/).
+
+```If you do not already have a subscription, you can register for a [free account](https://azure.microsoft.com/en-us/free/).
+```
+
+2. Create Azure Echo Bot
+
+We're going to create a new bot service by clicking **Create a resource** found in the upper left-hand corner of the Azure portal. 
+
+
+![image 1](images/1.0.png "Desc")
+
+
+
+Then, where it reads **Search the Marketplace**, type bot followed by the **Enter key** as shown in the image below. A new blade will open. Select **Web App Bot**.
+
+A new blade, Web App Bot, will open for you to provide information for the Bot Service. Fill in the requested information. Next, you can fill in the Bot name, create a new Resource Group to conveniently group resources together, and other information. 
+
+
 
 ![image 1](images/1.1.png  "Desc")
 
+
+A new blade will open for you to provide information for the Bot Service. Fill in the requested information. Next, you can fill in the Bot name, create a new Resource Group to conveniently group resources together, and other information. 
+
+``` **Note: Ensure the Bot Template is Basic (C#) ```
+``` **Note: Ensure that pin to dashboard is selected to make it easier to find your bot```
+
+Finish providing information and select **Create** to create the Bot Service and deploy to Azure. This may take several seconds.
+Azure is creating all of the base code needed for your bot.
+
+
+![image](images/1.2.png "Desc")
+
+
+Here's my dashboard with a couple of bots.
+Select bcc29echo by double clicking it.
+
+![image](images/1.3.png "Desc")
+
+This provides an overview of your bots information.
+
+![image](images/1.4.png "Desc")
+
+Let's investigate some of the other available items in the menu.
+Next, we'll check out **Build**. You are offered the opportunity to use an online editor to view or make changes to your code, download the code as a zip file or for continuous deployment.
+We will test the bot in Web Chat, an emulator on Azure, deploy to Azure and then dive into the code.
+
+![image](images/1.6.png "Desc")
+
+The Azure Echo Bot is running and we will test it in Web Chat. Type in **Hello** on the bottom of the window where it says **Type your message...**.
+
+
+
+![image](images/1.7.png "Desc")
+
+See some examples of the Azure Echo Bot successfully echoing what was typed. Notice that each response is prepended by a number.  We can input commands that affect the Bot's response.
+
+![image](images/1.8.png "Desc")
+
+Here, **reset** entered causes the Bot to query if we want to reset the count. Selecting yes will set the count to zero and no will leave the count as-is.
+
+![image](images/1.9.png "Desc")
+
 ![image](images/.png "Desc")
 
+SKype for devs
+https://dev.skype.com/bots
 
-Conferences/BostonCodeCamp/bzAzureEchoBot/images/1.1.png 
+Helpful URLs:
+
+https://docs.microsoft.com/en-us/azure/bot-service/bot-service-quickstart
+
 
 <img src="https://github.com/bethz/Conferences/tree/master/BostonCodeCamp/bzAzureEchoBot/images/1.1.png" width="600">
 
