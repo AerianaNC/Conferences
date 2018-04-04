@@ -44,10 +44,10 @@ Here is what we will do:
 
 1. Review AI Bot code highlights
 
+1. If time, try intents or utterances
 
 ***
-
-
+<img src="https://github.com/bethz/Conferences/tree/master/BostonCodeCamp/bzAzureEchoBot/imagesAzureML-FlightPrediction/blob/master/images/1.1.png" width="600">
 
 ### 1.1 Visual Studio Community
     
