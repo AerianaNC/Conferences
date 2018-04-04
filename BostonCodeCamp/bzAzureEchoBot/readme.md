@@ -47,7 +47,12 @@ Here is what we will do:
 1. If time, try intents or utterances
 
 ***
-<img src="https://github.com/bethz/Conferences/BostonCodeCamp/bzAzureEchoBot/images/1.1.png">
+
+![image 1](images/1.1.png  "Desc")
+
+![image](images/.png "Desc")
+
+
 Conferences/BostonCodeCamp/bzAzureEchoBot/images/1.1.png 
 
 <img src="https://github.com/bethz/Conferences/tree/master/BostonCodeCamp/bzAzureEchoBot/images/1.1.png" width="600">
