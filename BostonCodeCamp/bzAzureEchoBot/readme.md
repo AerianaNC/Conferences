@@ -47,8 +47,12 @@ Here is what we will do:
 1. If time, try intents or utterances
 
 ***
+<img src="https://github.com/bethz/Conferences/BostonCodeCamp/bzAzureEchoBot/images/1.1.png">
+Conferences/BostonCodeCamp/bzAzureEchoBot/images/1.1.png 
+
 <img src="https://github.com/bethz/Conferences/tree/master/BostonCodeCamp/bzAzureEchoBot/images/1.1.png" width="600">
 
+src="
 ### 1.1 Visual Studio Community
     
     Install [Visual Studio Community](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15)
