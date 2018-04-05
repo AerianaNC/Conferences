@@ -28,6 +28,8 @@ Here is what we will do:
 
    Time Required ~< 5 min
 
+1. Review Additional Azure Echo Bot Information
+
 1. Deploy Azure Echo Bot to Skype
 
    Time Required ~< 5 min
@@ -47,12 +49,12 @@ Here is what we will do:
 1. If time, try intents or utterances
 
 ***
-1. First, sign into the [Azure portal](http://portal.azure.com/).
+## 1. First, sign into Azure.
+The Azure portal is at http://portal.azure.com/.
 
-```If you do not already have a subscription, you can register for a [free account](https://azure.microsoft.com/en-us/free/).
-```
+```If you do not already have a subscription, you can register for a free account at https://azure.microsoft.com/en-us/free/.```
 
-2. Create Azure Echo Bot
+## 2. Create Azure Echo Bot
 
 We're going to create a new bot service by clicking **Create a resource** found in the upper left-hand corner of the Azure portal. 
 
@@ -61,43 +63,54 @@ We're going to create a new bot service by clicking **Create a resource** found 
 
 
 
-Then, where it reads **Search the Marketplace**, type bot followed by the **Enter key** as shown in the image below. A new blade will open. Select **Web App Bot**.
+Then, where it reads **Search the Marketplace**, type bot followed by the **Enter key** as shown in the image below. A new blade will open. 
 
-A new blade, Web App Bot, will open for you to provide information for the Bot Service. Fill in the requested information. Next, you can fill in the Bot name, create a new Resource Group to conveniently group resources together, and other information. 
-
-
+Select **Web App Bot**.
 
 ![image 1](images/1.1.png  "Desc")
 
+A blade will will open to the right. Select **Create** in the bottom portion of the screen.
 
-A new blade will open for you to provide information for the Bot Service. Fill in the requested information. Next, you can fill in the Bot name, create a new Resource Group to conveniently group resources together, and other information. 
+![image 1](images/2.3.png  "Desc")
+
+
+A new blade will open. Fill in the requested information. 
+Provide a Bot name, create a new Resource Group to conveniently group resources together, and other information. [This web site](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-quickstart) provides detailed descriptions of the fields. 
 
 ``` **Note: Ensure the Bot Template is Basic (C#) ```
-``` **Note: Ensure that pin to dashboard is selected to make it easier to find your bot```
 
-Finish providing information and select **Create** to create the Bot Service and deploy to Azure. This may take several seconds.
-Azure is creating all of the base code needed for your bot.
+``` **Note: Ensure that pin to dashboard is selected to make it easier to find your bot```
 
 
 ![image](images/1.2.png "Desc")
 
+Finish providing information. Here is more info about the information.
+
+![image](images/1.1a.png "Desc")
+
+Select **Create** to begin creation of the Bot Service
+. This may take several seconds.
+Azure is creating all of the base code needed for your bot.
+
+Because you selected **Pin to Dashboard**, the bot will be pinned to your Azure Dashboard which makes it easier to find.
 
 Here's my dashboard with a couple of bots.
-Select bcc29echo by double clicking it.
+Select your bot by double clicking it.
 
 ![image](images/1.3.png "Desc")
 
-This provides an overview of your bots information.
+Selecting your bot shows an overview of your bots information. You can find most of your bot's management options under **Bot Management**.
 
 ![image](images/1.4.png "Desc")
 
-Let's investigate some of the other available items in the menu.
-Next, we'll check out **Build**. You are offered the opportunity to use an online editor to view or make changes to your code, download the code as a zip file or for continuous deployment.
-We will test the bot in Web Chat, an emulator on Azure, deploy to Azure and then dive into the code.
 
-![image](images/1.6.png "Desc")
+Your Azure Echo Bot is already running! 
+And you didn't have to write **any** code!
 
-The Azure Echo Bot is running and we will test it in Web Chat. Type in **Hello** on the bottom of the window where it says **Type your message...**.
+We will now test the bot in Web Chat, an emulator on Azure.
+Select **Test in Web Chat**.
+
+To test, type **Hello** on the bottom of the window where it says **Type your message...**.
 
 
 
@@ -107,143 +120,108 @@ See some examples of the Azure Echo Bot successfully echoing what was typed. Not
 
 ![image](images/1.8.png "Desc")
 
-Here, **reset** entered causes the Bot to query if we want to reset the count. Selecting yes will set the count to zero and no will leave the count as-is.
+Here, **reset** causes the Bot to query if we want to reset the count in the response The bot prompts for yes/no. Selecting yes will set the count to zero and no will leave the count as-is.
 
 ![image](images/1.9.png "Desc")
 
-![image](images/.png "Desc")
+Here you can see the message **Reset count**  and the count reset to 1 in the message.
 
+![image](images/1.10a.png "Desc")
+
+
+
+Let's investigate some of the other available items in the menu that you may use for future development.
+
+Let's look at a **Settings**. These will be needed if you build your bot in your own development environment outside of Azure.
+
+![image](images/2.2.png "Desc")
+
+Next, we'll check out **Build**. 
+
+
+
+You are offered the opportunity to use an online editor to view or make changes to your code, download the code as a zip file or for continuous deployment.
+
+![image](images/1.6.png "Desc")
+
+## 4. Deploy Azure Echo Bot to Skype
+
+Next, select **Channels** in the Azure portal. This will provide a list of potential targets for you to deploy your bot. The code for the integration is handled by the Bot Framework.  For this example, we'll choose Skype.
+
+
+
+Select Skype as the target to deploy. You have the option to set up multiple targets but for this example we'll do just Skype.
+
+![image](images/1.12.png "Desc")
+
+Once we've selected Skype, no additional configuration is needed for this demo. 
+
+Click the word **Skype**  to pop up a page which will enable you to add your bot to your contacts.
+
+![image](images/2.5.png "Desc")
+
+If it's not already running, start Skype on your system.
+
+If you receive a warning like this, click the warning and clear it as sometimes a warning occurs on startup.
+
+![image](images/1.15.png "Desc")
+
+Click Add to Contacts.
+
+![image](images/2.4.png "Desc")
+
+Then, look in Skype for your Bot.
+
+![image](images/2.6.png "Desc")
+
+Type a message.
+
+![image](images/2.7.png "Desc")
+
+## 3. Review Additional Azure Echo Bot Information
+
+
+However, the areas on the configure pane will require personalization for other bot development. In particular, Publish must be completed when there are more than 100 users.
+
+The Web Control enables devs to embed the bot in their own website. We will not be embedding the bot in a website in this demo.
+
+![image](images/1.13.png "Desc")
+
+Calling and Groups does not require any configuration for our demo.  Bots are in preview are limited to 100 contacts. If you require more than 100 contacts, then Review Guidelines for publishing the bot if you require more than 100 contacts.
+
+![image](images/1.17.png "Desc")
+
+## 7. Create Azure AI Bot with LUIS Language Understanding
+
+Create Azure AI Bot with LUIS Language
+
+In order to understand natural language, we will leverage some artificial intelligence work that's already been created by Microsoft. Follow the same procedure we used to create your echo bot to create a new, smarter bot.
+For the bot template, in the bot service blade, select Language understanding c# instead of Basic(C#). Then create the bot as before.
+
+
+Next, we will create a bot 
+![image](images/3.0.png "Desc")
+
+## 7. 
+Put build and how to rebuild in console
+Visual Studio Code running in a browser is called Monaco.
+
+
+
+![image](images/1.4.png "Desc")
 SKype for devs
 https://dev.skype.com/bots
 
+
+![image](images/1.11.png "Desc")
+
+If needed, can restart bot from all app service menu restart
 Helpful URLs:
 
 https://docs.microsoft.com/en-us/azure/bot-service/bot-service-quickstart
 
-
-<img src="https://github.com/bethz/Conferences/tree/master/BostonCodeCamp/bzAzureEchoBot/images/1.1.png" width="600">
-
-src="
-### 1.1 Visual Studio Community
-    
-    Install [Visual Studio Community](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15)
-    
-   Other: The code for the Bot Builder SDK is in [Github](https://github.com/Microsoft/BotBuilder).
-   
-1.2 Bot Framework
-
-   Download the [Bot Application](http://aka.ms/bf-bc-vstemplate), [Bot Controller](http://aka.ms/bf-bc-vscontrollertemplate), and [Bot Dialog](http://aka.ms/bf-bc-vsdialogtemplate) .zip files. Install the project template by copying Bot Application.zip to your Visual Studio 2017 project **templates directory**. Install the **item templates** by copying Bot Controller.zip and Bot Dialog.zip to your Visual Studio 2017 item templates directory.
-
-The Visual Studio 2017 project **templates directory** is typically located at:
-%USERPROFILE%\Documents\Visual Studio 2017\Templates\ProjectTemplates\Visual C#\ 
-
-The **item templates directory** is at %USERPROFILE%\Documents\Visual Studio 2017\Templates\ItemTemplates\Visual C#\
-   
-1.3 Azure - free account to use free Bot service
-1.4 Bot Emulator
- The Bot Emulator Framework is a desktop application that lets you test and debug your bot on localhost or running remotely through a tunnel. It is available [here](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator).
- 
-Optional:
-
-1.5 Git - if you want to copy my code
+favorite references:
+https://docs.microsoft.com/en-us/azure/bot-service/bot-service-quickstart
+https://dev.skype.com/bots
 
 
-***
-2.0 Develop an Echo Bot in Visual Studio Community 2017.
-
-2.1 Create Your Bot in Visual Studio
-
-Next, open Visual Studio and create a new C# project. Choose the Bot Application template for your new project and name it MyFirstBot.
-
-The Bot Application template provides the ability to create a project that contains all of the components needed to build a simple echo Bot without writing any additional code. 
-
-Verify that your project references the latest version of the SDK:
-
-Right-click on the project and select Manage NuGet Packages.
-
-In the Browse tab, type "Microsoft.Bot.Builder".
-Locate the Microsoft.Bot.Builder package in the list of search results.
-Click the Update button for the Microsoft Bot Builder package.
-Follow the prompts to accept the changes and update the package.
-
-Add Microsoft.bot.builder.cognitiveservices?
-
-<Look at code after emulator>
-<ctl + mouse for increase/decrease font> 
-   
-3.0 Test your Bot in the Bot Emulator   
-    You are now ready to run your Bot in the Bot Framework Emulator to test it out.
-    
-3.1 Start your Bot in Visual Studio
-
-3.1.1 Click the run button.
-<image>
-
-Visual Studio will build the Bot, deploy it to localhost and launch a web browser to display the Bot's default.htm page.
-Your Bot is now running locally.
-**Note the url in the default.htm page. The port number will be used later**
- 
-<image>
-
-3.2 Start the Emulator
-<image>
-   Run the BotFramework-emulator desktop application. Connect to your Bot by typing this in the address bar in the emulator:
-   
-  '''http://localhost:3979/api/messages'''   
-
-Note: The port number, shown here as 3979, may be a different number on your system and was obtained from step 3.1.1 . 
-
-Leave Microsoft App ID and Microsoft App Password blank for now. 
-Click Connect. 
-
-Your Bot is now connected to the emulator.  
-
-3.2 Test your Bot
-    Type "Hi There" in the box marked below.
-    <image.
-    
-    You should see this:
-    
-    You sent Hi There which was 8 characters
-    
-    The emulator will prepend "You sent" and end with "which was nn characters" where nn is the number of characters in the message.
-    
-    <mention> Click on any speech bubble for details about the message in JSON format.
-    
-***
-
-
-
-junk below
-
-1. Publish a Bot from Visual Studio to Azure
-
-   - decide if it's azure first or vs first
-   https://azure.microsoft.com/en-us/free/
-   
-1. Take the simple Bot and add bla
-
-
-
-# 1. Create a simple Bot that echos what you type
-
-..1 Prereqs
-
-   Install Visual Studio 2017 Community
-   
-        https://www.visualstudio.com/vs/community/
-        
-        In Visual Studio, update all extensions to their latest versions.
-        
-        Download the Bot Application, Bot Controller, and Bot Dialog .zip files. Install the project template by copying Bot Application.zip to your Visual Studio 2017 project templates directory. Install the item templates by copying Bot Controller.zip and Bot Dialog.zip to your Visual Studio 2017 item templates directory.
-        
-        The Visual Studio 2017 project templates directory is typically located at %USERPROFILE%\Documents\Visual Studio 2017\Templates\ProjectTemplates\Visual C#\ and the item templates directory is at %USERPROFILE%\Documents\Visual Studio 2017\Templates\ItemTemplates\Visual C#\
-        
-..1 Install Microsoft BotFramework to Visual Studio
-    
-
-https://docs.microsoft.com/en-us/azure/bot-service/
-..1 Install Git
-        https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-    
-..2 
