@@ -20,6 +20,9 @@ https://www.bostoncodecamp.com/CC29/sessions/details/16630
 
 We are going to create a Bot which uses Cognitive Services to make your own intelligent Bot and deploy it to a 3rd party channel.
 
+<!-- Ctrl K - V  side by side in VS -->
+<!-- Ctrl shift V -->
+
 Here's how:
 
 1. Sign into Azure
@@ -48,12 +51,14 @@ The Azure portal is at http://portal.azure.com/.
 
 ```If you do not already have a subscription, you can register for a free account at https://azure.microsoft.com/en-us/free/.```
 
+![image](images/BCC CTA Slides slide1.png "Desc")
+
 ## 2. Create Azure Echo Bot
 
 We're going to create a new bot service by clicking **Create a resource** found in the upper left-hand corner of the Azure portal. 
 
 
-![image 1](images/1.0.png "Desc")
+![image](images/1.0.png "Desc")
 
 
 
@@ -61,11 +66,11 @@ Then, where it reads **Search the Marketplace**, type bot followed by the **Ente
 
 Select **Web App Bot**.
 
-![image 1](images/1.1.png  "Desc")
+![image](images/1.1.png  "Desc")
 
 A blade will will open to the right. Select **Create** in the bottom portion of the screen.
 
-![image 1](images/2.3.png  "Desc")
+![image](images/2.3.png  "Desc")
 
 
 A new blade will open the Bot Service configuration panel. Fill in the requested information. 
