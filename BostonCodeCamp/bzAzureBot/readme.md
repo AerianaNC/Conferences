@@ -16,16 +16,20 @@ https://www.bostoncodecamp.com/CC29/sessions/details/16630
 
 ![image](images/sponsorslide.png "Thank you to our Sponsors!")
 
-# Overview
+# Introduction
 
 We are going to create a Bot which uses Cognitive Services to make your own intelligent Bot and deploy it to a 3rd party channel.
 
-<!-- Ctrl K - V  side by side in VS -->
-<!-- Ctrl shift V -->
+<!-- Ctrl K  V  split and preview VS -->
+<!-- Ctrl shift V preview md file -->
+<!-- Ctl \ side by side -->
+<!-- Toggle side bar Ctrl B -->
 
-Here's how:
+Here's what we'll cover:
 
 1. Sign into Azure
+
+1. What is a bot and why do we want to use one?
 
 1. Create Azure Echo Bot in less than ~5 min!
 
@@ -46,14 +50,38 @@ Here's how:
 1. If time, try intents or utterances
 
 ***
+
+
 ## 1. First, sign into Azure.
 The Azure portal is at http://portal.azure.com/.
 
 ```If you do not already have a subscription, you can register for a free account at https://azure.microsoft.com/en-us/free/.```
 
-![image](images/BCC CTA Slides slide1.png "Desc")
+![image](images/BCCCTASlidesslide1.png "Create a free Azure Account")
 
-## 2. Create Azure Echo Bot
+## 2. What is a bot and why do we want to use one?
+
+Bots, or ChatBots, are a convenient way to interact conversationally. They are an interface to a service. Natural Language, or a CUI, Conversational User Interface,  is considered to be more easier and more natural for people than a GUI, Graphical User Interface which requires a mouse or typing.
+
+Many channels available for easy integration.
+
+![image](images/BCC29bzslide3.png "Easy integration with many channels")
+
+Your bot interfaces with the Bot Connector and the Bot Connector handles the complexity of interfacing to the many channels.
+
+![image](images/BCC29bzslide4.png "Integration is handled for you")
+
+Other good reasons include:
+- Quick to create a Bot proof-of-concept
+- Easier to deploy than an app
+- Easier to create than app
+- Any device
+- Platform Independent
+- AI services available
+- 
+- Widespread support
+
+## 3. Create Azure Echo Bot
 
 We're going to create a new bot service by clicking **Create a resource** found in the upper left-hand corner of the Azure portal. 
 
