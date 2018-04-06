@@ -16,14 +16,21 @@ https://www.bostoncodecamp.com/CC29/sessions/details/16630
 
 ![image](images/sponsorslide.png "Thank you to our Sponsors!")
 
-# Introduction
-
-We are going to create a Bot which uses Cognitive Services to make your own intelligent Bot and deploy it to a 3rd party channel.
-
 <!-- Ctrl K  V  split and preview VS -->
 <!-- Ctrl shift V preview md file -->
 <!-- Ctl \ side by side -->
 <!-- Toggle side bar Ctrl B -->
+
+# Introduction
+
+We are going to demonstrate how to create a Bot which uses Cognitive Services to make your own intelligent Bot and deploy it to a 3rd party channel.
+
+There are 3 goals for this talk:
+1. Demonstrate the Microsoft Bot Framework and how easy it is to create a simple bot to consume AI Services
+2. Introduce a wide range of AI Services that are available 
+3. Create a simple bot to consume AI services that you can leverage for more exciting work!
+
+
 
 Here's what we'll cover:
 
@@ -78,7 +85,7 @@ Other good reasons include:
 - Any device
 - Platform Independent
 - AI services available
-- 
+- Nearly anyone can use
 - Widespread support
 
 ## 3. Create Azure Echo Bot
