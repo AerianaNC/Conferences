@@ -1,5 +1,5 @@
  
-BCC29, April 2018
+BCC29, April 7, 2018, 10:15AM Adams
 
 # Intro to the Microsoft Bot Framework with Azure Cognitive Services to easily create a powerful AI bot for Twitter, Slack + more
 
@@ -8,19 +8,19 @@ The Microsoft Bot Framework and Azure Cognitive Services provide the ability for
 You can focus on developing your Bot while the Framework handles the heavy lifting of deploying your single Bot implementation to multiple 3rd party services like Slack, Twitter, Skype, Office and more. 
 In this session, I will demonstrate the Bot Framework with a free version of Visual Studio and C# to leverage powerful AI capabilities. You will walk away knowing how to use the Bot Framework, where to find and how to use the growing list of Cognitive Services to quickly make your own intelligent Bot and how to easily deploy to 3rd party channels like Twitter, Slack, etc.
 
-10:15AM Adams
-
 Beth Zeranski 
 
 @BethZeranski 
 
 https://www.bostoncodecamp.com/CC29/sessions/details/16630
 
+![image](images/sponsorslide.png "Thank you to our Sponsors!")
+
 # Overview
 
 We are going to create a Bot which uses Cognitive Services to make your own intelligent Bot and deploy it to a 3rd party channel.
 
-Here is what we will do:
+Here's how:
 
 1. Sign into Azure
 
@@ -159,8 +159,6 @@ Then, look in Skype for your Bot.
 Type a message.
 
 ![image](images/2.7.png "Desc")
-
-
 
 
 
@@ -364,4 +362,8 @@ https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-con
 https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-samples
 
 https://github.com/Microsoft/BotBuilder-Samples/tree/master/CSharp/intelligence-ImageCaption
+
+# Thank you to our sponsors
+
+![image](images/sponsorslide.png "Thank you to our Sponsors!")
 
