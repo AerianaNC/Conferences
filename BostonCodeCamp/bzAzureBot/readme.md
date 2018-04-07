@@ -23,12 +23,10 @@ https://www.bostoncodecamp.com/CC29/sessions/details/16630
 
 # Introduction
 
-We are going to demonstrate how to create a Bot which uses Cognitive Services to make your own intelligent Bot and deploy it to a 3rd party channel.
-
 There are 3 goals for this talk:
-1. Demonstrate the Microsoft Bot Framework and how easy it is to create a simple bot to consume AI Services
-2. Introduce a wide range of AI Services that are available 
-3. Create a simple bot to consume AI services that you can leverage for more exciting work!
+1. Demonstrate the Microsoft Bot Framework with an easy-to-create bot that interfaces with Skype and can echo back what you type in 
+2. Introduce a wide range of Microsoft AI Services that are available 
+3. Create a simple AI bot to consume Microsoft Cognitive Services LUIS, Language Understanding, that you can leverage for more exciting work!
 
 
 
@@ -70,7 +68,7 @@ The Azure portal is at http://portal.azure.com/.
 
 Bots, or ChatBots, are a convenient way to interact conversationally. They are an interface to a service. Natural Language, or a CUI, Conversational User Interface,  is considered to be more easier and more natural for people than a GUI, Graphical User Interface which requires a mouse or typing.
 
-Many channels available for easy integration.
+Many channels are available for easy integration.
 
 ![image](images/BCC29bzslide3.png "Easy integration with many channels")
 
@@ -88,7 +86,7 @@ Other good reasons include:
 - Nearly anyone can use
 - Widespread support
 
-## 3. Create Azure Echo Bot
+## 3. Create Azure Echo Bot in less than ~5 min!
 
 We're going to create a new bot service by clicking **Create a resource** found in the upper left-hand corner of the Azure portal. 
 
@@ -138,7 +136,7 @@ Selecting your bot shows an overview of your bots information. You can find most
 ![image](images/1.4.png "Desc")
 
 
-Your Azure Echo Bot is already running! 
+## Your Azure Echo Bot is already running! 
 And you didn't have to write **any** code!
 
 We will now test the bot in Web Chat, an emulator on Azure.
@@ -150,11 +148,13 @@ To test, type **Hello** on the bottom of the window where it says **Type your me
 
 ![image](images/1.7.png "Desc")
 
-See some examples of the Azure Echo Bot successfully echoing what was typed. The response confirms that the bot has received the message. Notice that each response is prepended by a number.  We can input commands that affect the Bot's response.
+See some examples of the Azure Echo Bot successfully echoing what was typed. The response confirms that the bot has received the message. Notice that each response is prepended by a number.  
+
+Next, we'll show how we can input commands that affect the Bot's response.
 
 ![image](images/1.8.png "Desc")
 
-Here, **reset** causes the Bot to query if we want to reset the count in the response The bot prompts for yes/no. Selecting yes will set the count to zero and no will leave the count as-is.
+Here, **reset** causes the Bot to query if we want to reset the count in the response. The bot prompts for yes/no. Selecting yes will set the count to zero and no will leave the count as-is.  The important item to note is the a user response can cause an activity in the bot.
 
 ![image](images/1.9.png "Desc")
 
@@ -164,10 +164,7 @@ Here you can see the message **Reset count**  and the count reset to 1 in the me
 
 
 
-Let's investigate some of the other available items in the menu that you may use for future development.
-
-
-## 3. Deploy Azure Echo Bot to Skype
+## 3. Deploy Azure Echo Bot to Skype in less than ~5 min!
 
 Next, select **Channels** in the Azure portal. This will provide a list of potential targets for you to deploy your bot. The code for the integration is handled by the Bot Framework.  For this example, we'll choose Skype.
 
@@ -179,13 +176,21 @@ Select Skype as the target to deploy. You have the option to set up multiple tar
 
 Once we've selected Skype, no additional configuration is needed for this demo. 
 
-If Health says **Warning** instead of running, click it. Generally, the warning is usually related to a startup issue and you can just clear the message.
+## If it's not already running, start Skype on your system.
 
-If it's not already running, start Skype on your system.
+Check to see that the Skype channel indicates it is running.
 
-Then, click the word **Skype**  to pop up a page which will enable you to add your bot to your contacts in Skype.
+Note: In Azure, If Health says **Warning** instead of **running**, click Warning and clear it. Generally, the warning is usually related to a startup issue.
 
 ![image](images/2.5.png "Desc")
+
+## 4. Deploy Azure Echo Bot to Skype in less than ~ 5 min!
+
+
+Click the word **Skype**  to pop up a page which will enable you to add your bot to your contacts in Skype.
+
+![image](images/2.5.png "Click the word Skype")
+
 
 
 Click Add to Contacts.
@@ -204,7 +209,7 @@ Type a message.
 
 
 
-## 4. Review Additional Azure Echo Bot Information
+## 5. Review Additional Azure Echo Bot Information
 
 Let's look at a **Settings**. These will be needed if you build your bot in your own development environment outside of Azure.
 
@@ -226,12 +231,12 @@ Calling and Groups does not require any configuration for our demo.  Bots are in
 
 ![image](images/1.17.png "Desc")
 
-## 5. Review Azure Echo Bot Code Highlights
+## 6. Review Azure Echo Bot Code Highlights
 
 First the Post Method within Controllers\MessagesController.cs 
  receives the message from the user and invokes the echo dialog.
 
-```c#
+```csharp
  [BotAuthentication]
     public class MessagesController : ApiController
     {
@@ -266,7 +271,7 @@ If the message text is "reset", the bot will confirm you intended to reset the c
 Else, the count of the response is prepended to "You said " followed by the input text.
 
 
-```c#
+```csharp
     [Serializable]
     public class EchoDialog : IDialog<object>
     {
@@ -298,21 +303,84 @@ Else, the count of the response is prepended to "You said " followed by the inpu
         }
 ```
 
-## 6. Demo LUIS, Language Understanding
+## 7. Demo LUIS, Language Understanding
 
-## 7. Create Azure AI Bot with LUIS Language Understanding
+LUIS makes it possible to add natural language to your bot.  Most examples are fairly complicated. This is a simple example so you can understand how to extend this implementation.
 
 
-In order to understand natural language, we will leverage some artificial intelligence work that's already been created by Microsoft. Follow the same procedure we used to create your echo bot to create a new, smarter bot.
-For the bot template, in the bot service blade, select Language understanding c# instead of Basic(C#). Then create the bot as before.
+A LUIS app enables your app to understand what a person wants in their own words.
+
+Utterances, intents and entities are key concepts to LUIS providing this capability. A client app can pass user input to a LUIS app and advanced AI models developed by data scientists interpret the input to return relevant, detailed information back.
+
+Microsoft provides prebuilt domain models to as a great way to get going quickly.  There are a number of prebuilt domains for things such as Calendar, Communication, and more.  You can either use existing domains as-is or you can augment them with words specific to your use. More info [here](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-how-to-use-prebuilt-domains).
+
+I want to give you a brief idea to understand some key items for LUIS:
+
+Utterances - the text input from a user
+
+Intents - the action the user wants to perform
+
+Entities - Relevant, detailed information in the utterance 
+
+Utterance: Book me a flight to Cairo
+Intent: BookFlight
+Entities: Cairo
+
+Utterance: When does your store open?
+Intent: StoreHoursAndLocation
+Entities: open
+
+Utterance: Book a meeting with Beth at 10am
+Intent: ScheduleMeeting
+Entities: Beth, 1am
+
+A model starts with a list of general intentions. To personalize, you provide a list of example phrases for each intent.
+
+When an utterance is provided to LUIS, it responds with JSON that indicates the initial utterance, or query, the top scoring intent and it's score or prediction and the other intents with their score. 
+
+One of my favorite LUIS [examples.
+](https://azure.microsoft.com/en-us/services/cognitive-services/language-understanding-intelligent-service/)
+
+
+## 8. Create Azure AI Bot with LUIS Language Understanding
+
+
+In order to understand natural language, we will leverage some artificial intelligence work that's already been created by Microsoft. Follow the same procedure we used to create your echo bot to create a new, slightly smarter bot.
+
+This bot will have 4 intents:
+- None
+- Greeting
+- Cancel
+- Help
+
+Let's create a LUIS enabled Bot!
+
+Follow the same steps as for the prior bot EXCEPT, when filling in the bot template, in the bot service blade, select **Language understanding C#** instead of **Basic(C#)**. Then, continue to create the bot as before. 
 
 ![image](images/3.0.png "Desc")
 
-Azure will connect your bot to the LUIS app and provides all needed code for this demo.
+Azure will connect your bot to the LUIS app and provides all needed code for this demo.  Using LUIS, this bot will identify one of four intents and will echo what was typed in.
 
-Let's look at BasicLuisDialog.cs.
+This code is simple so that it is clear how it works. You can add additional intents to LUIS for your own application. See [Luis.ai](luis.ai) for further information.
 
-```c#
+Let's test the new LUIS Bot.
+We have 4 intents, None, Greeting, Cancel and Help. 
+
+A number of common greetings are easily recognized as a Greeting intent.  A Help intent is also shown.
+
+![image](images/3.1.png "Desc")
+
+Next, some common phrases that would cause a Cancel intent.
+
+![image](images/3.2.png "Desc")
+
+This is a wonderful base to add additional functionality.
+
+## 9. Review AI Bot Code Highlights
+
+Let's look at BasicLuisDialog.cs for this bot.
+
+```csharp
 using System;
 using System.Configuration;
 using System.Threading.Tasks;
@@ -369,39 +437,34 @@ namespace Microsoft.Bot.Sample.LuisBot
 }
 ```
 
-## 7. 
-Put build and how to rebuild in console
-Visual Studio Code running in a browser is called Monaco.
+## 10. If time, try intents and utterances
+
+[See LUIS in action](https://www.luis.ai/home)
+
+[Intents and Entities demo'd with desklamp](https://azure.microsoft.com/en-us/services/cognitive-services/language-understanding-intelligent-service/)
+
+### Helpful Information
+
+[Skype for devs](https://dev.skype.com/bots)
 
 
-
-SKype for devs
-https://dev.skype.com/bots
-
-
+[Where to find info on my bots](https://dev.botframework.com/bots)
 ![image](images/1.11.png "Desc")
 
-If needed, can restart bot from all app service menu restart
-Helpful URLs:
+[Microsoft Bot Quickstart](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-quickstart)
 
-https://docs.microsoft.com/en-us/azure/bot-service/bot-service-quickstart
+[Skype bots](https://dev.skype.com/bots)
 
-favorite references:
-https://docs.microsoft.com/en-us/azure/bot-service/bot-service-quickstart
-https://dev.skype.com/bots
+[Prebuilt entity reference](https://docs.microsoft.com/en-us/azure/cognitive-services/LUIS/luis-reference-prebuilt-entities)
 
-### Prebuilt entity reference
-https://docs.microsoft.com/en-us/azure/cognitive-services/LUIS/luis-reference-prebuilt-entities
+[Bot Framework Additional Resources](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-resources-links-help)
 
-### Bot Framework Additional Resources
-https://docs.microsoft.com/en-us/azure/bot-service/bot-service-resources-links-help
+[Key Concepts in Bot Builder SDK](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-concepts)
 
-## Key Concepts in Bot Builder SDK
-https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-concepts
+[Bot dotnet samples](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-samples)
 
-https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-samples
-
-https://github.com/Microsoft/BotBuilder-Samples/tree/master/CSharp/intelligence-ImageCaption
+[Csharp sample](
+https://github.com/Microsoft/BotBuilder-Samples/tree/master/CSharp/intelligence-ImageCaption)
 
 # Thank you to our sponsors
 
